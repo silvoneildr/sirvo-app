@@ -1,13 +1,21 @@
 steps:
 - name: node:latest
   entrypoint: yarn
-  args: ['install']
+  args: ["install"]
 - name: node:latest
   entrypoint: yarn
-  args: ['test']
+  args: ["test"]
 - name: node:latest
   entrypoint: yarn
-  args: ['build']
-- name: gcr.io/cloud-builders/docker
-  args: ['build', '-t', 'gcr.io/sirvo-app/sirvo-app', '.']
-images: ['gcr.io/sirvo-app/sirvo-app']
+  args: ["build"]
+- name: "gcr.io/cloud-builders/docker"
+  args:
+    [
+      "build",
+      "-t",
+      "gcr.io/sirvo-app/sirvo-app:latest",
+      "--cache-from",
+      "gcr.io/sirvo-app/sirvo-app:latest",
+      ".",
+    ]
+images: ["gcr.io/sirvo-app/sirvo-app"]
