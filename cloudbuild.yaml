@@ -28,4 +28,7 @@ steps:
         "deployment/sirvo-deployment",
         "sirvo-container=gcr.io/$PROJECT_ID/sirvo-app",
       ]
+    env:
+    - CLOUDSDK_CONTAINER_CLUSTER=sirvo-cluster
+    - CLOUDSDK_COMPUTE_ZONE=us-central1-a
 images: ["gcr.io/sirvo-app/sirvo-app"]
