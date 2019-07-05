@@ -18,4 +18,6 @@ steps:
       "gcr.io/$PROJECT_ID/sirvo-app:latest",
       ".",
     ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/sirvo-app']
 images: ["gcr.io/sirvo-app/sirvo-app"]
