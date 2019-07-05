@@ -4,7 +4,7 @@ metadata:
   name: sirvo-deployment
   labels:
     name: sirvo-app
-    version: 0.0.2
+    version: 0.0.3
 spec:
   replicas: 1
   selector:
