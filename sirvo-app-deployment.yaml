@@ -2,8 +2,19 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: sirvo-deployment
+  labels:
+    name: sirvo-app
+    version: 0.0.1
 spec:
   replica: 1
+  selector:
+    matchLabels:
+      name: sirvo-app
+  template:
+    metadata:
+      name: sirvo-app
+      labels:
+        name: sirvo-app
   template:
     spec:
       containers:
