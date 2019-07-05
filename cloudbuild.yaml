@@ -13,9 +13,9 @@ steps:
     [
       "build",
       "-t",
-      "gcr.io/sirvo-app/sirvo-app:latest",
+      "gcr.io/$PROJECT_ID/sirvo-app:latest",
       "--cache-from",
-      "gcr.io/sirvo-app/sirvo-app:latest",
+      "gcr.io/$PROJECT_ID/sirvo-app:latest",
       ".",
     ]
 images: ["gcr.io/sirvo-app/sirvo-app"]
