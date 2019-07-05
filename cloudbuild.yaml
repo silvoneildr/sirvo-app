@@ -2,11 +2,9 @@ steps:
 - name: node:latest
   entrypoint: yarn
   args: ['test']
-steps:
 - name: node:latest
   entrypoint: yarn
   args: ['build']
-steps:
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/sirvo-app/sirvo-app', '.']
 images: ['gcr.io/sirvo-app/sirvo-app']
