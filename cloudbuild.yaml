@@ -23,10 +23,9 @@ steps:
   - name: "gcr.io/cloud-builders/kubectl"
     args:
       [
-        "set",
-        "image",
-        "deployment/sirvo-deployment",
-        "sirvo-container=gcr.io/$PROJECT_ID/sirvo-app",
+        "apply",
+        "-f",
+        "./sirvo-app-deployment.yaml"
       ]
     env:
     - CLOUDSDK_CONTAINER_CLUSTER=sirvo-cluster

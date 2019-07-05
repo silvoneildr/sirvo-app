@@ -1,0 +1,11 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: sirvo-deployment
+spec:
+  replica: 1
+  template:
+    spec:
+      containers:
+        - name: sirvo-container
+          image: gcr.io/sirvo-app/sirvo-app
