@@ -11,6 +11,10 @@ spec:
     matchLabels:
       name: sirvo-app
   template:
+    metadata:
+      name: sirvo-app
+      labels:
+        name: sirvo-app
     spec:
       containers:
         - name: sirvo-container
