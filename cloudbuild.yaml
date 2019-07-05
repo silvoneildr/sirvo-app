@@ -1,13 +1,13 @@
 steps:
-- name: node:latest
-  entrypoint: yarn
-  args: ["install"]
-- name: node:latest
-  entrypoint: yarn
-  args: ["test"]
-- name: node:latest
-  entrypoint: yarn
-  args: ["build"]
+# - name: node:latest
+#   entrypoint: yarn
+#   args: ["install"]
+# - name: node:latest
+#   entrypoint: yarn
+#   args: ["test"]
+# - name: node:latest
+#   entrypoint: yarn
+#   args: ["build"]
 - name: "gcr.io/cloud-builders/docker"
   args:
     [
