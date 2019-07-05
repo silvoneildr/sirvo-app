@@ -6,7 +6,7 @@ metadata:
     name: sirvo-app
     version: 0.0.1
 spec:
-  replica: 1
+  replicas: 1
   selector:
     matchLabels:
       name: sirvo-app
